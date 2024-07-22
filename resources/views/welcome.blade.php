@@ -35,7 +35,7 @@
         </div>
     </header>
 
-    <div class="flex flex-col items-center m-40 md:flex-row ">
+    <div class="flex items-center m-40">
         <div class="flex-1 ">
             <div>
                 <h3 class="">Hospedagem de site</h3>
@@ -55,22 +55,46 @@
                 </ul>
             </div>
 
-            <div class="flex items-center gap-20 ">
+            <div class="grid grid-cols-2 ">
                 <button
-                    class="px-10 py-5 font-medium border outline-none bg-deadpool-yellow hover:border-deadpool-red hover:animate-pulse">Comece
+                    class="px-10 py-5 font-medium border shadow-lg outline-none bg-deadpool-yellow hover:border-deadpool-red hover:animate-pulse">Comece
                     com até 55% OFF</button>
 
                 <div class="text-center ">
                     <p class="flex items-center justify-center gap-4 font-semibold">A partir de <span
-                            class="text-4xl font-bold text-deadpool-red">R$10,99/mês</span></p>
+                            class="text-4xl font-bold text-deadpool-red">R$10,99/mês*</span></p>
                 </div>
+                <div class="mt-2">
+                    <p>Até 30 dias para reembolso</p>
+                </div>
+                
             </div>
         </div>
 
-        <div class="flex items-center justify-center flex-1">
+        <div class="flex items-center flex-1 gap-10">
             {{-- <img src="{{ asset('images/home.png') }}" alt="Hospedagem" class="w-1/2 "> --}}
-            <img src="{{ asset('images/deadpool-hearth.png') }}" alt="Hospedagem" class="w-1/2 ">
+            <div class="flex flex-col items-center justify-center p-4 py-4 shadow-2xl rounded-xl ">
+                <div class="p-5 rounded-md shadow-md">
+                    <div class="text-center">
+                        <p class="font-black ">Aproveite</p>
+                    </div>
+                    <div class="flex items-center justify-center gap-5">
+                        <div class="flex flex-col items-start justify-start p-1 bg-slate-200 rounded-xl drop-shadow-xl">
+                            <p class="font-extrabold text-deadpool-black">OFF</p>
+                            <p class="font-extrabold text-deadpool-yellow">OFF</p>
+                            <p class="font-extrabold text-deadpool-red">OFF</p>
+                        </div>
 
+                        <div class="flex items-center ">
+                            <h1 class="font-serif text-3xl font-black">55% OFF</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="{{ asset('images/deadpool-hearth.png') }}" alt="Hospedagem" class="w-1/2 bg-cover">
+                </div>
+            </div>
         </div>
     </div>
 
@@ -97,10 +121,10 @@
     </div>
 
 
-    <div class="flex p-10 overflow-x-auto snap-x snap-mandatory">
-        <div class="flex-shrink-0 h-40 p-2 m-2 bg-white border rounded-lg shadow-md snap-center w-80 border-deadpool-red">
+    <div class="flex gap-2 p-10 m-40 overflow-x-auto snap-x snap-mandatory">
+        <div class="flex-shrink-0 h-40 px-2 py-2 text-center border rounded-lg shadow-md px-2bg-white snap-center w-80 border-deadpool-red">
             <img src="" alt="">
-            <div>
+            <div class="text-center">
                 <h2>Hospedagem de site</h2>
             </div>
             <div>
@@ -113,8 +137,9 @@
                 <button>Ver planos</button>
             </div>
         </div>
-    
-        <div class="flex-shrink-0 h-40 p-2 m-2 bg-white border rounded-lg shadow-md snap-center w-80 border-deadpool-red">
+
+        <div class="flex-shrink-0 h-40 px-2 py-2 text-center border rounded-lg shadow-md px-2bg-white snap-center w-80 border-deadpool-red">
+
 
             <img src="" alt="">
             <div>
@@ -130,8 +155,9 @@
                 <button>Ver planos</button>
             </div>
         </div>
-    
-        <div class="flex-shrink-0 h-40 p-2 m-2 bg-white border rounded-lg shadow-md snap-center w-80 border-deadpool-red">
+
+        <div class="flex-shrink-0 h-40 px-2 py-2 text-center border rounded-lg shadow-md px-2bg-white snap-center w-80 border-deadpool-red">
+
 
             <img src="" alt="">
             <div>
@@ -147,8 +173,9 @@
                 <button>Ver planos</button>
             </div>
         </div>
-    
-        <div class="flex-shrink-0 h-40 p-2 m-2 bg-white border rounded-lg shadow-md snap-center w-80 border-deadpool-red">
+
+        <div class="flex-shrink-0 h-40 px-2 py-2 text-center border rounded-lg shadow-md px-2bg-white snap-center w-80 border-deadpool-red">
+
 
             <img src="" alt="">
             <div>
@@ -165,7 +192,8 @@
             </div>
         </div>
 
-        <div class="flex-shrink-0 h-40 p-2 m-2 bg-white border rounded-lg shadow-md snap-center w-80 border-deadpool-red">
+        <div class="flex-shrink-0 h-40 px-2 py-2 text-center border rounded-lg shadow-md px-2bg-white snap-center w-80 border-deadpool-red">
+
 
             <img src="" alt="">
             <div>
@@ -182,8 +210,8 @@
             </div>
         </div>
 
-        <div class="flex-shrink-0 h-40 p-2 m-2 bg-white border rounded-lg shadow-md snap-center w-80 border-deadpool-red">
-            <img src="" alt="">
+               <div class="flex-shrink-0 h-40 px-2 py-2 text-center border rounded-lg shadow-md px-2bg-white snap-center w-80 border-deadpool-red">
+
             <div>
                 <h2>Servidor VPS</h2>
             </div>
@@ -198,21 +226,21 @@
             </div>
         </div>
 
-        
+
     </div>
-    
 
-        <p>teste</p>
 
-        <p>teste</p>
-        <p>teste</p>
+    <p>teste</p>
 
-        <p>teste</p>
-        <p>teste</p>
-        <p>teste</p>
-        <p>teste</p>
-        <p>teste</p>
-        <p>teste</p>
+    <p>teste</p>
+    <p>teste</p>
+
+    <p>teste</p>
+    <p>teste</p>
+    <p>teste</p>
+    <p>teste</p>
+    <p>teste</p>
+    <p>teste</p>
 
 
 
