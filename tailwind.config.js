@@ -6,6 +6,10 @@ export default {
     "./resources/**/*.vue",
   ],
   theme: {
+    fontFamily: {
+      'pridi': ["Pridi", "sans-serif"],
+      'squada': ['Squada One', "sans serif"],
+    },
     extend: {
       colors: {
         deadpool: {

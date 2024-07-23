@@ -5,12 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&family=Squada+One&display=swap"
+        rel="stylesheet">
+
     @vite('resources/css/app.css')
     <title>Document</title>
+
 </head>
 
 <body class=" bg-slate-50">
-    <header class="p-4 text-white bg-deadpool-black">
+    <header class="p-4 text-white bg-deadpool-black font-pridi">
         <div class="flex gap-24 ">
             <div>
                 <h1 class="text-2xl font-bold">HostPool</h1>
@@ -35,7 +40,7 @@
         </div>
     </header>
 
-    <div class="flex items-center m-40">
+    <div class="flex items-center m-40 font-squada">
         <div class="flex-1 ">
             <div>
                 <h3 class="">Hospedagem de site</h3>
@@ -67,7 +72,7 @@
                 <div class="mt-2">
                     <p>Até 30 dias para reembolso</p>
                 </div>
-                
+
             </div>
         </div>
 
@@ -86,7 +91,7 @@
                         </div>
 
                         <div class="flex items-center ">
-                            <h1 class="font-serif text-3xl font-black">55% OFF</h1>
+                            <h1 class="font-serif text-3xl font-black font-squada">55% OFF</h1>
                         </div>
                     </div>
                 </div>
@@ -99,12 +104,12 @@
     </div>
 
 
-    <div class="p-4 m-40 bg-white drop-shadow-xl rounded-3xl">
+    <div class="p-4 m-40 bg-white drop-shadow-xl rounded-3xl font-squada ">
         <div class="flex items-center ">
             <img src="{{ asset('images/pngwing.com.png') }}" alt="Hospedagem" class="p-4 -z-1">
 
-            <div class="font-bold tracking-normal ">
-                <h3>Encontre seu dominio </h3>
+            <div class="tracking-normal ">
+                <h3>Encontre  seu dominio </h3>
             </div>
             <div class="flex items-center w-full gap-2 rounded-md">
                 <input id="dominio" type="search" placeholder="Digite seu domínio"
@@ -116,113 +121,129 @@
                     <li class="px-1 py-1 border rounded-xl border-deadpool-red">.online</li>
                     <li class="px-1 py-1 border rounded-xl border-deadpool-red">.store</li>
                 </ul>
+
+                <div>
+                    <h3 class="text-gray-500 font-extralight "><span class="text-xl font-medium text-black font-squada">66% OFF</span> no pacote de   proteção da marca</h3>
+                </div>
             </div>
         </div>
     </div>
 
 
-    <div class="flex gap-2 p-10 m-40 overflow-x-auto snap-x snap-mandatory">
-        <div class="flex-shrink-0 h-40 px-2 py-2 text-center border rounded-lg shadow-md px-2bg-white snap-center w-80 border-deadpool-red">
+    <div class="flex gap-2 p-10 m-40 overflow-x-auto snap-x snap-mandatory font-squada ">
+        <div
+            class="items-start flex-shrink-0 p-4 duration-300 bg-white border rounded-lg shadow cursor-pointer h-50 snap-center w-80 hover:border-deadpool-red hover:ease-in hover:shadow-lg">
             <img src="" alt="">
-            <div class="text-center">
-                <h2>Hospedagem de site</h2>
+            <div class="m-2">
+                <h2 class="text-2xl font-medium ">Hospedagem de site</h2>
             </div>
-            <div>
-                <p>Completo e acessível, com várias ferramentas para criar seu site</p>
+            <div class="m-2">
+                <p class="text-gray-500 ">Completo e acessível, com várias ferramentas para criar seu site</p>
             </div>
-            <div>
-                <p>Comece a partir de R$ 10,99/mês</p>
+            <div class="m-2">
+                <p>Comece a partir <br> de R$ 10,99/mês</p>
             </div>
-            <div>
-                <button>Ver planos</button>
+            <div class="m-2">
+                <button class="text-xl font-medium hover:underline">Ver planos</button>
             </div>
         </div>
 
-        <div class="flex-shrink-0 h-40 px-2 py-2 text-center border rounded-lg shadow-md px-2bg-white snap-center w-80 border-deadpool-red">
-
+        <div
+            class="items-start flex-shrink-0 p-4 duration-300 bg-white border rounded-lg shadow cursor-pointer h-50 snap-center w-80 hover:border-deadpool-red hover:ease-in hover:shadow-lg">
 
             <img src="" alt="">
-            <div>
-                <h2>Loja HostPool</h2>
+            <div class="m-2">
+                <h2 class="text-2xl font-medium">Loja HostPool</h2>
             </div>
-            <div>
-                <p>Todos os recursos para facilitar a criação de uma loja virtual criativa</p>
+            <div class="m-2">
+                <p class="text-gray-500 ">Todos os recursos para facilitar a criação de uma loja virtual criativa</p>
             </div>
-            <div>
-                <p>Confira os valores <strong>promocionais</strong></p>
+            <div class="m-2">
+                <p>Confira os valores <br> <span>Promocionais</span></p>
             </div>
-            <div>
-                <button>Ver planos</button>
+            <div class="m-2 ">
+                <button class="text-xl font-medium hover:underline">Ver planos</button>
             </div>
         </div>
 
-        <div class="flex-shrink-0 h-40 px-2 py-2 text-center border rounded-lg shadow-md px-2bg-white snap-center w-80 border-deadpool-red">
-
+        <div
+            class="items-start flex-shrink-0 p-4 duration-300 bg-white border rounded-lg shadow cursor-pointer h-50 snap-center w-80 hover:border-deadpool-red hover:ease-in hover:shadow-lg">
 
             <img src="" alt="">
-            <div>
-                <h2>E-mail profissional Titan</h2>
+            <div class="m-2">
+                <h2 class="text-2xl font-medium">E-mail profissional Titan</h2>
             </div>
-            <div>
-                <p>Impulsione sua marca com um e-mail personalizado</p>
+            <div class="m-2">
+
+                <p class="text-gray-500 ">Impulsione sua marca com um e-mail personalizado</p>
             </div>
-            <div>
-                <p>Comece a partir de <strong>R$ 8,99/mês</strong></p>
+            <div class="m-2">
+
+                <p>Comece a partir de <br> <span>R$ 8,99/mês</span></p>
             </div>
-            <div>
-                <button>Ver planos</button>
+            <div class="m-2">
+
+                <button class="text-xl font-medium hover:underline">Ver planos</button>
             </div>
         </div>
 
-        <div class="flex-shrink-0 h-40 px-2 py-2 text-center border rounded-lg shadow-md px-2bg-white snap-center w-80 border-deadpool-red">
-
+        <div
+            class="items-start flex-shrink-0 p-4 duration-300 bg-white border rounded-lg shadow cursor-pointer h-50 snap-center w-80 hover:border-deadpool-red hover:ease-in hover:shadow-lg">
 
             <img src="" alt="">
-            <div>
-                <h2>Servidor VPS</h2>
+            <div class="m-2">
+
+                <h2 class="text-2xl font-medium">Servidor VPS</h2>
             </div>
             <div>
-                <p>Acesso Root em um ambiente de hospedagem totalmente escalável</p>
+                <p class="text-gray-500 ">Acesso Root em um ambiente de hospedagem totalmente escalável</p>
             </div>
-            <div>
-                <p>Comece a partir de R$ 82,39/mês</p>
+            <div class="m-2">
+
+                <p>Comece a partir <br> de R$ 82,39/mês</p>
             </div>
-            <div>
-                <button>Ver Planos</button>
+            <div class="m-2">
+
+                <button class="text-xl font-medium hover:underline">Ver Planos</button>
             </div>
         </div>
 
-        <div class="flex-shrink-0 h-40 px-2 py-2 text-center border rounded-lg shadow-md px-2bg-white snap-center w-80 border-deadpool-red">
-
+        <div
+            class="items-start flex-shrink-0 p-4 duration-300 bg-white border rounded-lg shadow cursor-pointer h-50 snap-center w-80 hover:border-deadpool-red hover:ease-in hover:shadow-lg">
 
             <img src="" alt="">
-            <div>
-                <h2>Servidor VPS</h2>
+            <div class="m-2">
+                <h2 class="text-2xl font-medium">Servidor VPS</h2>
             </div>
-            <div>
-                <p>Acesso Root em um ambiente de hospedagem totalmente escalável</p>
+            <div class="m-2">
+                <p class="text-gray-500 ">Acesso Root em um ambiente de hospedagem totalmente escalável</p>
             </div>
-            <div>
-                <p>Comece a partir de R$ 82,39/mês</p>
+            <div class="m-2">
+
+                <p>Comece a partir <br> de R$ 82,39/mês</p>
             </div>
-            <div>
-                <button>Ver Planos</button>
+            <div class="m-2">
+
+                <button class="text-xl font-medium hover:underline">Ver Planos</button>
             </div>
         </div>
+        <div
+            class="items-start flex-shrink-0 p-4 duration-300 bg-white border rounded-lg shadow cursor-pointer h-50 snap-center w-80 hover:border-deadpool-red hover:ease-in hover:shadow-lg">
 
-               <div class="flex-shrink-0 h-40 px-2 py-2 text-center border rounded-lg shadow-md px-2bg-white snap-center w-80 border-deadpool-red">
+            <div class="m-2">
 
-            <div>
-                <h2>Servidor VPS</h2>
+                <h2 class="text-2xl font-medium">Servidor VPS</h2>
             </div>
-            <div>
-                <p>Acesso Root em um ambiente de hospedagem totalmente escalável</p>
+            <div class="m-2">
+                <p class="text-gray-500 ">Acesso Root em um ambiente de hospedagem totalmente escalável</p>
             </div>
-            <div>
-                <p>Comece a partir de R$ 82,39/mês</p>
+            <div class="m-2">
+
+                <p>Comece a partir <br> de R$ 82,39/mês</p>
             </div>
-            <div>
-                <button>Ver Planos</button>
+            <div class="m-2">
+
+                <button class="text-xl font-medium hover:underline">Ver Planos</button>
             </div>
         </div>
 
@@ -230,19 +251,46 @@
     </div>
 
 
-    <p>teste</p>
+    <div class="p-4 m-40 text-6xl text-center font-squada ">
+        <div>
+            <h1>Eleve o nível do seu projeto online com as <br> melhores tecnologias </h1>
+        </div>
 
-    <p>teste</p>
-    <p>teste</p>
+        <div class="flex items-center justify-between gap-4 p-4 ">
+            <div>
+                <img src="{{ asset('images/logo-wordpress.svg') }}" alt="Hospedagem">
+            </div>
 
-    <p>teste</p>
-    <p>teste</p>
-    <p>teste</p>
-    <p>teste</p>
-    <p>teste</p>
-    <p>teste</p>
+            <div>
+                <img src="{{ asset('images/logo-cpanel.svg') }}" alt="Hospedagem">
+            </div>
 
+            <div>
+                <img src="{{ asset('images/logo-cisco.svg') }}" alt="Hospedagem">
+            </div>
 
+            <div>
+                <img src="{{ asset('images/logo-intel.svg') }}" alt="Hospedagem" class="p-4 -z-1">
+
+            </div>
+
+            <div>
+                <img src="{{ asset('images/logo-comodo.svg') }}" alt="Hospedagem">
+            </div>
+
+            <div>
+                <img src="{{ asset('images/logo-letsencrypt.svg') }}" alt="Hospedagem">
+            </div>
+
+            <div>
+                <img src="{{ asset('images/logo-linux.svg') }}" alt="Hospedagem">
+            </div>
+
+            <div>
+                <img src="{{ asset('images/logo-windows.svg') }}" alt="Hospedagem">
+            </div>
+        </div>
+    </div>
 
 
 </body>
