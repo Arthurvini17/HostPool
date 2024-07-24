@@ -44,6 +44,7 @@
         <div class="flex-1 ">
             <div>
                 <h3 class="">Hospedagem de site</h3>
+                {{-- @svg('camera', 'w-6 h-6') --}}
             </div>
             <div>
                 <h1 class="text-5xl text-deadpool-black">Hospedagem de site <br> consolidada <span> com tudo </span>
@@ -109,11 +110,11 @@
             <img src="{{ asset('images/pngwing.com.png') }}" alt="Hospedagem" class="p-4 -z-1">
 
             <div class="tracking-normal ">
-                <h3>Encontre  seu dominio </h3>
+                <h3>Encontre seu dominio </h3>
             </div>
             <div class="flex items-center w-full gap-2 rounded-md">
                 <input id="dominio" type="search" placeholder="Digite seu domínio"
-                    class="w-full h-10 p-5 border rounded-md outline-none drop-shadow-xl border-deadpool-red">
+                    class="w-full h-10 p-5 font-medium bg-white border rounded-md outline-none text-deadpool-black drop-shadow-xl border-deadpool-red">
 
                 <img src="{{ asset('images/icon-search.png') }}" alt="" class="w-8 h-8 ml-2 ">
                 <ul class="flex items-center gap-3">
@@ -123,16 +124,18 @@
                 </ul>
 
                 <div>
-                    <h3 class="text-gray-500 font-extralight "><span class="text-xl font-medium text-black font-squada">66% OFF</span> no pacote de   proteção da marca</h3>
+                    <h3 class="text-gray-500 font-extralight "><span
+                            class="text-xl font-medium text-black font-squada">66% OFF</span> no pacote de proteção da
+                        marca</h3>
                 </div>
             </div>
         </div>
     </div>
 
 
-    <div class="flex gap-2 p-10 m-40 overflow-x-auto snap-x snap-mandatory font-squada ">
+    <div class="flex gap-2 p-10 m-40 font-squada carousel carousel-center rounded-box ">
         <div
-            class="items-start flex-shrink-0 p-4 duration-300 bg-white border rounded-lg shadow cursor-pointer h-50 snap-center w-80 hover:border-deadpool-red hover:ease-in hover:shadow-lg">
+            class="flex-shrink-0 p-4 overflow-x-auto duration-300 bg-white border rounded-lg shadow cursor-pointer carousel-itemitems-start h-50 w-80 hover:border-deadpool-red hover:ease-in hover:shadow-lg">
             <img src="" alt="">
             <div class="m-2">
                 <h2 class="text-2xl font-medium ">Hospedagem de site</h2>
@@ -149,7 +152,7 @@
         </div>
 
         <div
-            class="items-start flex-shrink-0 p-4 duration-300 bg-white border rounded-lg shadow cursor-pointer h-50 snap-center w-80 hover:border-deadpool-red hover:ease-in hover:shadow-lg">
+            class="flex-shrink-0 p-4 duration-300 bg-white border rounded-lg shadow cursor-pointer carousel-itemitems-start h-50 snap-center w-80 hover:border-deadpool-red hover:ease-in hover:shadow-lg">
 
             <img src="" alt="">
             <div class="m-2">
@@ -167,7 +170,7 @@
         </div>
 
         <div
-            class="items-start flex-shrink-0 p-4 duration-300 bg-white border rounded-lg shadow cursor-pointer h-50 snap-center w-80 hover:border-deadpool-red hover:ease-in hover:shadow-lg">
+            class="flex-shrink-0 p-4 duration-300 bg-white border rounded-lg shadow cursor-pointer carousel-itemitems-start h-50 snap-center w-80 hover:border-deadpool-red hover:ease-in hover:shadow-lg">
 
             <img src="" alt="">
             <div class="m-2">
@@ -188,7 +191,7 @@
         </div>
 
         <div
-            class="items-start flex-shrink-0 p-4 duration-300 bg-white border rounded-lg shadow cursor-pointer h-50 snap-center w-80 hover:border-deadpool-red hover:ease-in hover:shadow-lg">
+            class="flex-shrink-0 p-4 duration-300 bg-white border rounded-lg shadow cursor-pointer carousel-itemitems-start h-50 snap-center w-80 hover:border-deadpool-red hover:ease-in hover:shadow-lg">
 
             <img src="" alt="">
             <div class="m-2">
@@ -209,7 +212,7 @@
         </div>
 
         <div
-            class="items-start flex-shrink-0 p-4 duration-300 bg-white border rounded-lg shadow cursor-pointer h-50 snap-center w-80 hover:border-deadpool-red hover:ease-in hover:shadow-lg">
+            class="flex-shrink-0 p-4 duration-300 bg-white border rounded-lg shadow cursor-pointer carousel-itemitems-start h-50 snap-center w-80 hover:border-deadpool-red hover:ease-in hover:shadow-lg">
 
             <img src="" alt="">
             <div class="m-2">
@@ -228,7 +231,7 @@
             </div>
         </div>
         <div
-            class="items-start flex-shrink-0 p-4 duration-300 bg-white border rounded-lg shadow cursor-pointer h-50 snap-center w-80 hover:border-deadpool-red hover:ease-in hover:shadow-lg">
+            class="flex-shrink-0 p-4 duration-300 bg-white border rounded-lg shadow cursor-pointer carousel-itemitems-start h-50 snap-center w-80 hover:border-deadpool-red hover:ease-in hover:shadow-lg">
 
             <div class="m-2">
 
@@ -291,6 +294,64 @@
             </div>
         </div>
     </div>
+
+
+    <div class="flex flex-col items-center">
+        <div class="mb-4">
+            <h1 class="text-4xl">Veja o que os clientes estão dizendo sobre nossos serviços de hospedagem</h1>
+        </div>
+        <div class="flex items-center justify-center carousel rounded-box ">
+            <div class="w-1/2 carousel rounded-box">
+                <div class="flex flex-col flex-shrink-0 w-1/2 p-4 bg-white shadow-lg carousel-item">
+                    <div>
+                        <div class="mb-4">
+                            <p>Mais completa e segura. É rápido, dinâmico e intuitivo. Recomendo pra quem precisa de um
+                                site
+                                estável.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <img src="{{asset('images/reinaldo-yoshino.png')}}" alt="Cliente" class="w-24 h-24">
+                        <div class="flex self-end">
+                            <p>reinaldo-yoshino</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-start flex-shrink-0 w-1/2 p-4 bg-white shadow-lg carousel-item">
+                    <div class="mb-4">
+                        <p>Mais completa e segura. É rápido, dinâmico e intuitivo. Recomendo pra quem precisa de um site
+                            estável.</p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <img src="{{asset('images/reinaldo-yoshino.png')}}" alt="Cliente" class="w-24 h-24">
+                        <div class="flex self-end">
+                            <p>reinaldo-yoshino</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-start flex-shrink-0 w-1/2 p-4 bg-white shadow-lg carousel-item">
+                    <div class="mb-4">
+                        <p>Mais completa e segura. É rápido, dinâmico e intuitivo. Recomendo pra quem precisa de um site
+                            estável.</p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <img src="{{asset('images/reinaldo-yoshino.png')}}" alt="Cliente" class="w-24 h-24">
+                        <div class="flex self-end">
+                            <p>reinaldo-yoshino</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+
 
 
 </body>
