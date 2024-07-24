@@ -9,6 +9,7 @@ export default {
     fontFamily: {
       'pridi': ["Pridi", "sans-serif"],
       'squada': ['Squada One', "sans serif"],
+      'galano': ['Galano, Helvetica, Arial, sans-serif'],
     },
     extend: {
       colors: {
