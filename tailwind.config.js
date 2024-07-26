@@ -11,6 +11,9 @@ export default {
       'squada': ['Squada One', "sans serif"],
       'galano': ['Galano, Helvetica, Arial, sans-serif'],
     },
+    daisyui: {
+      themes: ["light", "dark", "cupcake"],
+    },
     extend: {
       colors: {
         deadpool: {

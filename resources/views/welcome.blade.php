@@ -136,9 +136,9 @@
     </div>
 
     <div class="flex items-center gap-2 p-10 m-40 overflow-x-scroll font-squada rounded-box">
-        
+
         <div class="flex items-center justify-center">
-           
+
             <div
                 class="items-start flex-shrink-0 p-4 overflow-x-auto duration-300 bg-white border rounded-lg shadow cursor-pointer h-50 w-80 hover:border-deadpool-red hover:ease-in hover:shadow-lg">
 
@@ -261,9 +261,6 @@
 
         </div>
     </div>
-
-
-
     <div class="p-4 m-40 text-6xl text-center font-squada ">
         <div>
             <h1>Eleve o nível do seu projeto online com as <br> melhores tecnologias </h1>

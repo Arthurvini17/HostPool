@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/register', [AuthController::class, 'register_index'])->name('register.index');
+Route::post('/register', [AuthController::class, 'register_create'])->name('register.create');
