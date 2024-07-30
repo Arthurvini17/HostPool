@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PlanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,3 +24,6 @@ Route::get('/login', [AuthController::class, 'login_index'])->name('login.index'
 Route::post('/login', [AuthController::class, 'login_auth'])->name('login.auth');
 
 Route::get('/plans', [AuthController::class, 'showUserPlans'])->name('plans.index')->middleware('auth');
+
+Route::get('/buyplan', [PlanController::class, 'buyPlanIndex'])->name('buy.plan')->middleware('auth');
+Route::post('/plans/buy/{plan}', [PlanController::class, 'buy'])->name('plan.buy');

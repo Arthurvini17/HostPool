@@ -15,32 +15,7 @@
 </head>
 
 <body class="bg-slate-50">
-    <header class="p-4 text-white bg-deadpool-black font-pridi">
-        <div class="flex gap-24 ">
-            <div>
-                <h1 class="text-2xl font-bold">HostPool</h1>
-            </div>
-            <nav class="flex items-center space-x-4 ">
-                <ul class="flex space-x-4">
-                    <li><a href="#" class="text-deadpool-black-400">Dominio</a></li>
-                    <li><a href="#" class="hover:text-gray-400">Hospedagem</a></li>
-                    <li><a href="#" class="hover:text-gray-400">Loja HostPool</a></li>
-                    <li><a href="#" class="hover:text-gray-400">Recursos</a></li>
-
-                </ul>
-            </nav>
-
-            <nav class="flex items-center justify-end ml-auto space-x-4">
-                <ul class="flex space-x-4">
-                    <li><a href="#" class="hover:text-gray-400">Login</a></li>
-                    <li><a href="#" class="hover:text-gray-400">Sobre</a></li>
-                    <li><a href="#" class="hover:text-gray-400">Contato</a></li>
-                    <li><a href="{{route('plans.index')}}" class="hover:text-gray-400">meus planos</a></li>
-                    
-                </ul>
-            </nav>
-        </div>
-    </header>
+   
 
     <div class="flex items-center m-40 font-squada bg-slate-50">
         <div class="flex-1 ">
