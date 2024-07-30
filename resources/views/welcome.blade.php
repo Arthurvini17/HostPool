@@ -35,6 +35,8 @@
                     <li><a href="#" class="hover:text-gray-400">Login</a></li>
                     <li><a href="#" class="hover:text-gray-400">Sobre</a></li>
                     <li><a href="#" class="hover:text-gray-400">Contato</a></li>
+                    <li><a href="{{route('plans.index')}}" class="hover:text-gray-400">meus planos</a></li>
+                    
                 </ul>
             </nav>
         </div>

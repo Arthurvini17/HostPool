@@ -12,9 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('cpf');
-            $table->string('sobrenome');
-            
+            $table->foreignId('plan_id')->nullable()->constrained()->nullable();
         });
     }
 
@@ -24,7 +22,9 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            Schema::dropIfExists('users');
+            $table->dropForeign(['plan_id']);
+            $table->dropColumn('plan_id');
         });
     }
 };
+

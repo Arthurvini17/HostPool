@@ -2,38 +2,96 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Plan;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    public function register_index(){
+
+    public function home_index()
+    {
+        return view('welcome');
+    }
+
+
+    public function register_index()
+    {
         return view('register');
     }
 
-    public function register_create(Request $request){
-        
+    public function register_create(Request $request)
+    {
         $request->validate([
             'name' => ['required'],
             'email' => ['required', 'email', 'unique:users'],
+            'sobrenome' => ['required'],
             'password' => ['required'],
-            'endereco' => ['required'],
-        ],[
+            'cpf' => ['required'],
+        ], [
             'name.required' => 'Esse campo tem ser preenchido',
-            'email.required' => 'Esse campo tem que ser preenchdio',
-            'email.email' => 'Esse campo tem que ser preenchido com um email',
-            'email.unique' => 'Esse email ja existe',
-            'password' => 'Digite sua senha',
-            'endereco' => 'Digite seu endreço',
-
+            'sobrenome' => 'esse campo tem que ser preenchdio',
+            'email.required' => 'Esse campo tem que ser preenchido',
+            'email.email' => 'Esse campo tem que ser preenchido com um email válido',
+            'email.unique' => 'Esse email já existe',
+            'password.required' => 'Digite sua senha',
+            'cpf.required' => 'Digite seu CPF',
         ]);
-        
+
         User::create([
             'name' => $request->name,
+            'sobrenome' => $request->sobrenome,
             'email' => $request->email,
-            'password' =>  bcrypt($request->password),
+            'password' => bcrypt($request->password),
+            'cpf' => $request->cpf,
         ]);
 
-        return redirect()->redirect('register.index');
+        return redirect()->route('home.index');
     }
+
+
+    public function login_index()
+    {
+        return view('login');
+    }
+
+    public function login_auth(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ], [
+            'email.required' => 'Esse campo tem que ser preenchido',
+            'email.email' => 'Esse campo tem que ser preenchido com um email',
+            'password' => 'Esse campo tem que ser preenchido',
+        ]);
+
+        $remember = $request->has('remember');
+
+        if (Auth::attempt($credentials, $remember)) {
+            $request->session()->regenerate();
+
+            return view('welcome');
+        } else {
+            return back()->withErrors([
+                'email' => 'As credenciais fornecidas não correspondem aos nossos registros.',
+            ])->onlyInput('email');
+        }
+    }
+
+
+    public function showUserPlans()
+{
+    if (!Auth::check()) {
+        return redirect()->route('login');
+    }
+
+    $user = Auth::user();
+    $plans = $user->plans;
+
+    return view('showuserplan', ['plans' => $plans], ['users' => $user]); 
+}
+
+    
 }
