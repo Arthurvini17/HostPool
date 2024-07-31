@@ -31,6 +31,9 @@
                     <li><a href="#" class="hover:text-gray-400">Sobre</a></li>
                     <li><a href="#" class="hover:text-gray-400">Contato</a></li>
                     <li><a href="{{ route('plans.index') }}" class="hover:text-gray-400">Meus Planos</a></li>
+                    @auth
+                    <li> <a href="{{route('logout')}}" class="hover:text-gray-400">Logout </a></li>
+                    @endauth
                 </ul>
             </nav>
         </div>

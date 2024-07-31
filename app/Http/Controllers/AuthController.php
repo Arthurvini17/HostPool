@@ -81,17 +81,12 @@ class AuthController extends Controller
     }
 
 
-    public function showUserPlans()
-{
-    if (!Auth::check()) {
-        return redirect()->route('login');
+    public function logout(Request $remember){
+        Auth::logout();
+        return redirect()->route('login.index');
     }
 
-    $user = Auth::user();
-    $plans = $user->plans;
 
-    return view('showuserplan', ['plans' => $plans], ['users' => $user]); 
-}
 
     
 }
