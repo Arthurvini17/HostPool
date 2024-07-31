@@ -38,10 +38,38 @@
 
 
 <section>
-    <div class="container p-4 mx-auto">
+    <div class="container mx-auto font-pridi">
         <h2 class="mb-4 text-xl font-bold">Planos Disponíveis</h2>
-        <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
-            @foreach($plans as $plan)
+        <div class="flex items-center justify-center gap-10 md:grid-cols-3">
+
+            @forelse ($plans as $plan)
+            <div class="px-2 py-2 text-white rounded-md bg-zinc-900 text-start max-w-56">
+                <div class="">
+                    <h1>{{$plan->name}}</h1>
+                </div>
+
+                <div class="flex flex-col gap-4 mt-2 text-center">
+                    <div class="">
+                        <p>{{$plan->description}}</p>
+                    </div>
+
+                    <div class="">
+                        <p>R$ <span>{{$plan->price}}</span> <span>/mês</span></p>
+                    </div>
+
+                    <div class="">
+                        <form action="{{route('plan.buy', $plan->id)}}" method="POST">
+                            @csrf
+                        <button class="px-2 py-2 rounded-lg bg-deadpool-red">Comprar agora</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+                
+            @empty
+                <p>Sem planos para comprar</p>
+            @endforelse
+            {{-- @foreach($plans as $plan)
                 <div class="p-4 border rounded-lg">
                     <h3 class="text-lg font-bold">{{ $plan->name }}</h3>
                     <p>{{ $plan->description }}</p>
@@ -51,7 +79,7 @@
                         <button type="submit" class="text-blue-500 hover:underline">Comprar</button>
                     </form>
                 </div>
-            @endforeach
+            @endforeach --}}
         </div>
     </div>
 </section>
