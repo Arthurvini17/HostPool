@@ -26,7 +26,7 @@
                     <label for="name" class="block text-sm font-medium text-gray-700">Nome do usuário *</label>
                     <input class="w-full p-2 mt-1 border rounded-lg" type="text" name="name" id="name">
                     @error('name')
-                    <div class="mt-2 font-medium rounded-md  bg-deadpool-red">{{ $message }}</div>
+                    <div class="mt-2 font-medium rounded-md bg-deadpool-red">{{ $message }}</div>
                     @enderror
                 </div>
     

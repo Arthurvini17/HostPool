@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <title>@yield('title', 'HostPool')</title>
     @vite('resources/css/app.css')
 </head>
+
 <body>
     <header class="p-4 text-white bg-deadpool-black font-pridi">
         <div class="flex gap-24">
@@ -27,13 +29,19 @@
 
             <nav class="flex items-center justify-end ml-auto space-x-4">
                 <ul class="flex space-x-4">
-                    <li><a href="#" class="hover:text-gray-400">Login</a></li>
-                    <li><a href="#" class="hover:text-gray-400">Sobre</a></li>
-                    <li><a href="#" class="hover:text-gray-400">Contato</a></li>
+
+                    @auth
+                    <li>{{auth()->user()->name}}</li>
                     <li><a href="{{ route('plans.index') }}" class="hover:text-gray-400">Meus Planos</a></li>
+                    @endauth
+                    @guest
+                    <li><a href="{{route('login.index')}}" class="hover:text-gray-400">Login</a></li>
+                    @endguest
+                    <li><a href="#" class="hover:text-gray-400">Contato</a></li>
                     @auth
                     <li> <a href="{{route('logout')}}" class="hover:text-gray-400">Logout </a></li>
-                    @endauth
+                    @endguest
+
                 </ul>
             </nav>
         </div>
@@ -43,4 +51,5 @@
         @yield('content')
     </main>
 </body>
+
 </html>

@@ -40,10 +40,6 @@
                 <div class="mt-2">
                     <p>Até 30 dias para reembolso</p>
                 </div>
-
-                <div class="mt-2">
-                    <p> teste</p>
-                </div>
             </div>
         </div>
 

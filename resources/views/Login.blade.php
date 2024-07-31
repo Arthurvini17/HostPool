@@ -1,63 +1,49 @@
 <html data-theme="light" class="">
-<div>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&family=Squada+One&display=swap"
-        rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&family=Squada+One&display=swap"
+    rel="stylesheet">
 
-    @vite('resources/css/app.css')
+@vite('resources/css/app.css')
 
 
-    <div class="flex items-center justify-center min-h-screen font-pridi">
 
-        <div class="">
-            {{-- <div class="absolute -z-10 top-7">
-                <img src="{{asset('images/deadpool-down.jpg')}}" alt="">
-            </div> --}}
+<div class="flex items-center justify-center min-h-screen text-center font-pridi ">
     
-            <div class="mb-5 text-center">
-                <h1 class="text-2xl font-bold">Faça seu login</h1>
-            </div>
-            <form action="{{route('login.auth')}}" method="POST" class="grid gap-5 p-10 bg-white rounded-lg shadow-md ">
+    <div class="">
+        <div class="col-span-2 ">
+            <h1 class="text-xl">Faça seu login</h1>
+            <p class="text-md">Para melhores promoções ative as notificações do email</p>
+        </div>
 
+        <div class="flex items-center justify-center">
+            <form action="" method="POST" class="flex flex-col gap-2 p-4 rounded-md shadow-md">
                 @csrf
-                <div class="grid col-span-2 ">
-                    <label for="name" class="block text-sm font-medium text-gray-700">Nome do usuário *</label>
-                    <input class="w-full p-2 mt-1 border rounded-lg "  type="text" name="name" id="name">
-                    @error('name')
-                    <div class="mt-2 font-medium rounded-md bg-deadpool-red">{{ $message }}</div>
-                    @enderror
+                <div class="text-start">
+                    <label for="name">Seu nome</label>
+                    <input class="w-full px-1 py-1 border rounded-md " type="text" name="name">
                 </div>
-    
-    
-    
-                <div class="">
-                    <label for="email" class="block text-sm font-medium text-gray-700">Email *</label>
-                    <input class="w-full p-2 mt-1 border rounded-lg" type="email" name="email" id="email">
-                    @error('email')
-                    <div class="w-40 mt-2 font-medium text-center rounded-md bg-deadpool-red">{{ $message }}</div>
-                    @enderror
+
+                <div class="text-start">
+                    <label for="email">Seu Email</label>
+                    <input class="w-full px-1 py-1 border rounded-md " type="email" name="email">
                 </div>
-    
-                <div class="">
-                    <label for="password" class="block text-sm font-medium text-gray-700">Senha do usuário *</label>
-                    <input class="w-full p-2 mt-1 border rounded-lg" type="password" name="password" id="password">
-                    @error('password')
-                    <div class="w-40 mt-2 font-medium text-center rounded-md bg-deadpool-red">{{ $message }}</div>
-                    @enderror
+
+                <div class="text-start">
+                    <label for="password">Sua senha</label>
+                    <input class="w-full px-1 py-1 border rounded-md " type="password" name="password">
                 </div>
-    
-                <div class="col-span-2">
-                    <button class="w-full py-2 text-white rounded-lg bg-deadpool-red">Registrar-se</button>
+
+                <div class="items-start justify-start text-start">
+                    <label for="name">Lembrar-me</label>
+                    <input class="px-1 py-1 rounded-md text-start" type="checkbox" name="remember">
+                </div>
+
+                <div>
+                    <button class="px-2 py-2 rounded-md w-96 bg-deadpool-red">Logar</button>
                 </div>
             </form>
         </div>
     </div>
-    
+</div>
 
 </html>
-
-
-
-
-</body>
