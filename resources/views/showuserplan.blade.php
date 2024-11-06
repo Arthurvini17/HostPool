@@ -1,40 +1,47 @@
 @extends('layouts.master')
 
-@section('title', 'Comprar Planos - HostPool')
+@section('title', 'Ver Planos - HostPool')
 
 @section('content')
 
 <div>
-<p>olá {{auth()->user()->name}}</p>
-<h2 class="mb-4 text-xl font-bold">Esses são seus planos</h2>
-<div class="flex items-center justify-center gap-10 md:grid-cols-3">
-
-    @forelse ($plans as $plan)
-    <div class="px-2 py-2 rounded-md text-start bg-zinc-50 max-w-56">
-        <div class="">
-            <h1>{{$plan->name}}</h1>
+    <div class="flex flex-col items-center justify-center">
+        <div>
+            <p class="text-3xl ">Olá {{auth()->user()->name}}</p>
         </div>
-
-        <div class="flex flex-col gap-4 mt-2 text-center">
-            <div class="">
-                <p>{{$plan->description}}</p>
-            </div>
-
-            <div class="">
-                <p>R$ <span>{{$plan->price}}</span> <span>/mês</span></p>
-            </div>
-
-            <div class="">
-                <button class="px-2 py-2 rounded-lg bg-deadpool-red">Comprar agora</button>
-            </div>
-        </div>
+        <h2 class="mb-4 text-xl font-bold text-white">Esses são seus planos</h2>
     </div>
-        
-    @empty
-        <p>Sem planos para comprar</p>
-    @endforelse
-    
-</div>
+
+    <div class="flex items-center justify-center gap-10 ">
+        @forelse ($plans as $plan)
+        <div class="w-full px-2 py-2 duration-150 rounded-md cursor-pointer text-start bg-zinc-50 max-w-56 hover:translate-y-6">
+            <div class="text-center">
+                <h1 class="font-bold text-black">{{$plan->name}}</h1>
+            </div>
+
+            <div class="flex flex-col gap-4 mt-2 text-center">
+                <div class="">
+                    <p class="font-semibold text-black">{{$plan->description}}</p>
+                </div>
+
+                <div class="">
+                    <p> <span class="font-bold text-black">R$ {{$plan->price}}</span> <span class="font-semibold text-black">/mês</span></p>
+                </div>
+
+                <div class="">
+                    <form action="{{route('delete.plan', $plan->id)}}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button class="px-4 py-2 font-semibold text-black duration-150 bg-red-500 rounded-lg hover:bg-red-400 ">Deletar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        @empty
+        <p>Você não tem planos</p>
+        @endforelse
+    </div>
 </div>
 
 @endsection

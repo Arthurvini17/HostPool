@@ -43,7 +43,7 @@
         <div class="flex items-center justify-center gap-10 md:grid-cols-3">
 
             @forelse ($plans as $plan)
-            <div class="px-2 py-2 text-white rounded-md bg-zinc-900 text-start max-w-56">
+            <div class="px-2 py-2 text-black rounded-md shadow-lg bg-zinc-50 text-start max-w-56">
                 <div class="">
                     <h1>{{$plan->name}}</h1>
                 </div>
@@ -60,7 +60,7 @@
                     <div class="">
                         <form action="{{route('plan.buy', $plan->id)}}" method="POST">
                             @csrf
-                        <button class="px-2 py-2 rounded-lg bg-deadpool-red">Comprar agora</button>
+                        <button class="px-2 py-2 text-white rounded-lg bg-deadpool-red">Comprar agora</button>
                     </form>
                     </div>
                 </div>

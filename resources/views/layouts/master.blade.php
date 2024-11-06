@@ -15,14 +15,14 @@
 <body>
     <header class="p-4 text-white bg-deadpool-black font-pridi">
         <div class="flex gap-24">
-            <div>
-                <h1 class="text-2xl font-bold">HostPool</h1>
+            <div class="transition-opacity duration-500 opacity-0 animate-fade-in">
+               <a href="{{route('home.index')}}"> <h1 class="text-2xl font-bold">HostPool</h1> </a> 
             </div>
             <nav class="flex items-center space-x-4">
                 <ul class="flex space-x-4">
                     <li><a href="#" class="text-deadpool-black-400">Dominio</a></li>
                     <li><a href="#" class="hover:text-gray-400">Hospedagem</a></li>
-                    <li><a href="#" class="hover:text-gray-400">Loja HostPool</a></li>
+                    <li><a href="{{route('buy.plan.index')}}" class="hover:text-gray-400">Loja HostPool</a></li>
                     <li><a href="#" class="hover:text-gray-400">Recursos</a></li>
                 </ul>
             </nav>
@@ -33,14 +33,13 @@
                     @auth
                     <li>{{auth()->user()->name}}</li>
                     <li><a href="{{ route('plans.index') }}" class="hover:text-gray-400">Meus Planos</a></li>
+                    <li> <a href="{{route('logout')}}" class="hover:text-gray-400">Logout </a></li>
+
                     @endauth
                     @guest
                     <li><a href="{{route('login.index')}}" class="hover:text-gray-400">Login</a></li>
                     @endguest
                     <li><a href="#" class="hover:text-gray-400">Contato</a></li>
-                    @auth
-                    <li> <a href="{{route('logout')}}" class="hover:text-gray-400">Logout </a></li>
-                    @endguest
 
                 </ul>
             </nav>
@@ -49,7 +48,7 @@
 
     <main class="">
         @yield('content')
-    </main>
+    </main> 
 </body>
 
 </html>

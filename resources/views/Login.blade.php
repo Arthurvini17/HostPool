@@ -5,41 +5,38 @@
 
 @vite('resources/css/app.css')
 
-
-
-<div class="flex items-center justify-center min-h-screen text-center font-pridi ">
-    
-    <div class="">
-        <div class="col-span-2 ">
-            <h1 class="text-xl">Faça seu login</h1>
-            <p class="text-md">Para melhores promoções ative as notificações do email</p>
+<div class="flex items-center justify-center min-h-screen mx-auto text-center font-pridi">
+    <div class="w-full p-4 md:w-1/2 lg:w-1/3">
+        <div class="mb-6">
+            <h1 class="text-2xl md:text-3xl lg:text-4xl">Faça seu login</h1>
+            <p class="text-md md:text-lg lg:text-xl">Para melhores promoções ative as notificações do email</p>
         </div>
 
         <div class="flex items-center justify-center">
-            <form action="" method="POST" class="flex flex-col gap-2 p-4 rounded-md shadow-md">
+            <form action="" method="POST" class="flex flex-col w-full gap-4 p-4 rounded-md shadow-md">
                 @csrf
                 <div class="text-start">
                     <label for="name">Seu nome</label>
-                    <input class="w-full px-1 py-1 border rounded-md " type="text" name="name">
+                    <input class="w-full px-3 py-2 border rounded-md" type="text" name="name">
                 </div>
 
                 <div class="text-start">
                     <label for="email">Seu Email</label>
-                    <input class="w-full px-1 py-1 border rounded-md " type="email" name="email">
+                    <input class="w-full px-3 py-2 border rounded-md" type="email" name="email">
                 </div>
 
                 <div class="text-start">
                     <label for="password">Sua senha</label>
-                    <input class="w-full px-1 py-1 border rounded-md " type="password" name="password">
+                    <input class="w-full px-3 py-2 border rounded-md" type="password" name="password">
                 </div>
 
-                <div class="items-start justify-start text-start">
-                    <label for="name">Lembrar-me</label>
-                    <input class="px-1 py-1 rounded-md text-start" type="checkbox" name="remember">
+                <div class="flex items-center text-start">
+                    <input class="mr-2" type="checkbox" name="remember">
+                    <label for="remember">Lembrar-me</label>
                 </div>
 
                 <div>
-                    <button class="px-2 py-2 rounded-md w-96 bg-deadpool-red">Logar</button>
+                    <button class="w-full px-4 py-2 text-white rounded-md bg-deadpool-red">Logar</button>
                 </div>
             </form>
         </div>

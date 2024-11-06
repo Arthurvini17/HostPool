@@ -26,9 +26,10 @@ Route::post('/login', [AuthController::class, 'login_auth'])->name('login.auth')
 Route::get('/plans', [PlanController::class, 'showUserPlans'])->name('plans.index')->middleware('auth');
 
 //arruma essa rota
-Route::get('/buyplan', [PlanController::class, 'buyPlanIndex'])->name('buy.plan')->middleware('auth');
+Route::get('/buyplan', [PlanController::class, 'buyPlanIndex'])->name('buy.plan.index')->middleware('auth');
 
 Route::post('/plans/buy/{plan}', [PlanController::class, 'buy'])->name('plan.buy');
+Route::delete('/plans/{plan}', [PlanController::class, 'delete'])->name('delete.plan');
 
 
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');

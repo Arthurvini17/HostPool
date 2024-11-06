@@ -8,14 +8,10 @@
     @vite('resources/css/app.css')
 
 
-    <div class="flex flex-col items-center justify-center min-h-screen p-5 font-pridi">
+    <div class="flex flex-col items-center justify-center min-h-screen p-5 font-pridi sm:min-h-screen ">
 
-        <div class="max-w-lg">
-            <div class="absolute top-7 -z-10">
-                <img src="{{asset('images/deadpool-down.jpg')}}" alt="">
-            </div>
-    
-            <div class="mb-5 text-center">
+        <div class="max-w-lg ">
+            <div class="mb-5 text-center ">
                 <h1 class="text-2xl font-bold">Crie seu cadastro</h1>
                 <p>Para ser cliente é necessário preencher corretamente o formulário abaixo com os respectivos dados cadastrais. Os campos com * são de preenchimento obrigatório e essenciais para criar sua conta.</p>
             </div>
@@ -26,7 +22,7 @@
                     <label for="name" class="block text-sm font-medium text-gray-700">Nome do usuário *</label>
                     <input class="w-full p-2 mt-1 border rounded-lg" type="text" name="name" id="name">
                     @error('name')
-                    <div class="mt-2 font-medium rounded-md bg-deadpool-red">{{ $message }}</div>
+                    <div class="w-full mt-2 font-medium rounded-md bg-deadpool-red">{{ $message }}</div>
                     @enderror
                 </div>
     
@@ -34,7 +30,7 @@
                     <label for="sobrenome" class="block text-sm font-medium text-gray-700">Sobrenome do usuário</label>
                     <input class="w-full p-2 mt-1 border rounded-lg" type="text" name="sobrenome" id="sobrenome">
                     @error('sobrenome')
-                    <div class="w-40 mt-2 font-medium text-center rounded-md bg-deadpool-red">{{ $message }}</div>
+                    <div class="w-full mt-2 font-medium text-center rounded-md bg-deadpool-red">{{ $message }}</div>
                     @enderror
                 </div>
     
@@ -50,7 +46,7 @@
                     <label for="email" class="block text-sm font-medium text-gray-700">Email *</label>
                     <input class="w-full p-2 mt-1 border rounded-lg" type="email" name="email" id="email">
                     @error('email')
-                    <div class="w-40 mt-2 font-medium text-center rounded-md bg-deadpool-red">{{ $message }}</div>
+                    <div class="w-full mt-2 font-medium text-center rounded-md bg-deadpool-red">{{ $message }}</div>
                     @enderror
                 </div>
     

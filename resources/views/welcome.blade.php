@@ -1,20 +1,21 @@
 @extends('layouts.master')
 
-@section('title', 'Comprar Planos - HostPool')
+@section('title', 'Home - HostPool')
 
 @section('content')
 
-<body class="bg-slate-50">
-   
+<body class="bg-slate-50 ">
 
-    <div class="flex items-center m-40 font-squada bg-slate-50">
-        <div class="flex-1 ">
+
+    <div class="flex items-center m-40 font-squada sm-min-h-screen ">
+        <div class=" sm:w-full md:flex-1">
             <div>
-                <h3 class="">Hospedagem de site</h3>
+                <h3 class=" sm-text-md">Hospedagem de site</h3>
                 {{-- @svg('camera', 'w-6 h-6') --}}
             </div>
             <div>
-                <h1 class="text-5xl text-deadpool-black">Hospedagem de site <br> consolidada <span> com tudo </span>
+                <h1 class="sm-text-md md:text-5xl sm: text-deadpool-black">Hospedagem de site <br> consolidada <span>
+                        com tudo </span>
                     <br> para seu sucesso
                 </h1>
             </div>
@@ -30,7 +31,7 @@
 
             <div class="grid grid-cols-2 ">
                 <button
-                    class="px-10 py-5 font-medium border shadow-lg outline-none bg-deadpool-yellow hover:border-deadpool-red hover:animate-pulse">Comece
+                    class="px-10 py-5 font-semibold text-black border rounded-tr-lg rounded-bl-lg shadow-lg outline-none bg-deadpool-yellow hover:border-deadpool-red hover:animate-pulse">Comece
                     com até 55% OFF</button>
 
                 <div class="text-center ">
@@ -46,20 +47,13 @@
         <div class="flex items-center flex-1 gap-10 ">
             {{-- <img src="{{ asset('images/home.png') }}" alt="Hospedagem" class="w-1/2 "> --}}
             <div class="flex flex-col items-center justify-center p-4 py-4 shadow-2xl rounded-xl ">
-                <div class="p-5 rounded-md shadow-md">
-                    <div class="text-center">
-                        <p class="font-black ">Aproveite</p>
+                <div class="p-5 ">
+                    <div class="text-2xl text-center">
+                        <p class="font-black text-black ">Aproveite</p>
                     </div>
-                    <div class="flex items-center justify-center gap-5">
-                        <div class="flex flex-col items-start justify-start p-1 bg-slate-200 rounded-xl drop-shadow-xl">
-                            <p class="font-extrabold text-deadpool-black">OFF</p>
-                            <p class="font-extrabold text-deadpool-yellow">OFF</p>
-                            <p class="font-extrabold text-deadpool-red">OFF</p>
-                        </div>
-
-                        <div class="flex items-center ">
-                            <h1 class="font-serif text-3xl font-black font-squada">55% OFF</h1>
-                        </div>
+                    <div class="flex items-center text-black">
+                        <h1 class="font-serif text-3xl font-black font-squada"> <span class="text-red-500">55%
+                                OFF</span> em todos nossos planos </h1>
                     </div>
                 </div>
 
@@ -98,16 +92,19 @@
         </div>
     </div>
 
-    <div class="flex items-center gap-2 p-10 m-40 overflow-x-scroll font-squada rounded-box">
+    <div class="flex items-center justify-center p-10 overflow-x-scroll font-squada rounded-box">
 
-        <div class="flex items-center justify-center">
+        <div class="flex items-center justify-center gap-10">
 
             <div
-                class="items-start flex-shrink-0 p-4 overflow-x-auto duration-300 bg-white border rounded-lg shadow cursor-pointer h-50 w-80 hover:border-deadpool-red hover:ease-in hover:shadow-lg">
+                class="items-start p-4 duration-300 bg-white border rounded-lg shadow cursor-pointer h-50 w-80 hover:border-deadpool-red hover:ease-in hover:shadow-lg">
 
                 <img src="" alt="">
                 <div class="m-2">
-                    <h2 class="text-2xl font-medium text-deadpool-black">Hospedagem de site</h2>
+                    <div class="flex flex-row">
+                        <img class="w-8" src="{{asset('images/icons8-dead-pool-96.png')}}" alt="">
+                        <h2 class="text-2xl font-medium text-deadpool-black">Hospedagem de site</h2>
+                    </div>
                 </div>
                 <div class="m-2">
                     <p class="text-gray-500 ">Completo e acessível, com várias ferramentas para criar seu site</p>
@@ -123,14 +120,16 @@
 
             <div
                 class="flex-shrink-0 p-4 duration-300 bg-white border rounded-lg shadow cursor-pointer carousel-itemitems-start h-50 w-80 hover:border-deadpool-red hover:ease-in hover:shadow-lg">
-
                 <img src="" alt="">
                 <div class="m-2">
+                    <div class="flex">
+                    <img class="w-8" src="{{asset('images/icons8-carcajou-96.png')}}" alt="">
                     <h2 class="text-2xl text-deadpool-black ">Loja HostPool</h2>
                 </div>
+
+                </div>
                 <div class="m-2">
-                    <p class="text-gray-500 ">Todos os recursos para facilitar a criação de uma loja virtual criativa
-                    </p>
+                    <p class="text-gray-500 ">Todos os recursos para facilitar a criação de uma loja virtual criativa</p>
                 </div>
                 <div class="m-2">
                     <p>Confira os valores <br> <span>Promocionais</span></p>
@@ -145,7 +144,10 @@
 
                 <img src="" alt="">
                 <div class="m-2">
+                    <div class="flex">
+                    <img class="w-8" src="{{asset('images/icons8-x-men-50.png')}}" alt="">
                     <h2 class="text-2xl text-deadpool-black">E-mail profissional Titan</h2>
+                    </div>
                 </div>
                 <div class="m-2">
 
@@ -160,68 +162,6 @@
                     <button class="text-xl font-medium hover:underline text-deadpool-red ">Ver planos</button>
                 </div>
             </div>
-
-            <div
-                class="flex-shrink-0 p-4 duration-300 bg-white border rounded-lg shadow cursor-pointer carousel-itemitems-start h-50 w-80 hover:border-deadpool-red hover:ease-in hover:shadow-lg">
-
-                <img src="" alt="">
-                <div class="m-2">
-
-                    <h2 class="text-2xl font-medium text-deadpool-black">Servidor VPS</h2>
-                </div>
-                <div>
-                    <p class="text-gray-500">Acesso Root em um ambiente de hospedagem totalmente escalável</p>
-                </div>
-                <div class="m-2">
-
-                    <p>Comece a partir <br> de R$ 82,39/mês</p>
-                </div>
-                <div class="m-2">
-
-                    <button class="text-xl font-medium hover:underline text-deadpool-red">Ver Planos</button>
-                </div>
-            </div>
-
-            <div
-                class="flex-shrink-0 p-4 duration-300 bg-white border rounded-lg shadow cursor-pointer carousel-itemitems-start h-50 w-80 hover:border-deadpool-red hover:ease-in hover:shadow-lg">
-
-                <img src="" alt="">
-                <div class="m-2">
-                    <h2 class="text-2xl font-medium text-deadpool-black">Servidor VPS</h2>
-                </div>
-                <div class="m-2">
-                    <p class="text-gray-500 ">Acesso Root em um ambiente de hospedagem totalmente escalável</p>
-                </div>
-                <div class="m-2">
-
-                    <p>Comece a partir <br> de R$ 82,39/mês</p>
-                </div>
-                <div class="m-2">
-
-                    <button class="text-xl font-medium hover:underline text-deadpool-red">Ver Planos</button>
-                </div>
-            </div>
-            <div
-                class="flex-shrink-0 p-4 duration-300 bg-white border rounded-lg shadow cursor-pointer carousel-itemitems-start h-50 w-80 hover:border-deadpool-red hover:ease-in hover:shadow-lg">
-
-                <div class="m-2">
-
-                    <h2 class="text-2xl font-medium text-deadpool-black">Servidor VPS</h2>
-                </div>
-                <div class="m-2">
-                    <p class="text-gray-500 ">Acesso Root em um ambiente de hospedagem totalmente escalável</p>
-                </div>
-                <div class="m-2">
-
-                    <p>Comece a partir <br> de R$ 82,39/mês</p>
-                </div>
-                <div class="m-2">
-
-                    <button class="text-xl font-medium hover:underline text-deadpool-red">Ver Planos</button>
-                </div>
-
-            </div>
-
         </div>
     </div>
     <div class="p-4 m-40 text-6xl text-center font-squada ">
