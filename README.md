@@ -2,5 +2,7 @@ Este é um projeto para fins de aprendizado onde aplico meus conhecimentos nas T
 
 
 #[Laravel 10](https://laravel.com/) Framework PHP backend
-[Tailwind CSS)
+
+[Tailwind CSS](tailwindcss.com) Framework CSS 
+
 [daisyUI](https://daisyui.com/) biblioteca de componentes UI  para Tailwind CSS.
