@@ -62,7 +62,10 @@
                     <button class="w-full py-2 text-white rounded-lg bg-deadpool-red">Registrar-se</button>
                 </div>
             </form>
+
         </div>
+
+        
     </div>
     
 

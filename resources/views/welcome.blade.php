@@ -103,7 +103,7 @@
                 <div class="m-2">
                     <div class="flex flex-row">
                         <img class="w-8" src="{{asset('images/icons8-dead-pool-96.png')}}" alt="">
-                        <h2 class="text-2xl font-medium text-deadpool-black">Hospedagem de site</h2>
+                        <h2 class="text-2xl font-medium text-deadpool-black">Plano P</h2>
                     </div>
                 </div>
                 <div class="m-2">
@@ -124,7 +124,7 @@
                 <div class="m-2">
                     <div class="flex">
                     <img class="w-8" src="{{asset('images/icons8-carcajou-96.png')}}" alt="">
-                    <h2 class="text-2xl text-deadpool-black ">Loja HostPool</h2>
+                    <h2 class="text-2xl text-deadpool-black ">Plano W</h2>
                 </div>
 
                 </div>
@@ -146,7 +146,7 @@
                 <div class="m-2">
                     <div class="flex">
                     <img class="w-8" src="{{asset('images/icons8-x-men-50.png')}}" alt="">
-                    <h2 class="text-2xl text-deadpool-black">E-mail profissional Titan</h2>
+                    <h2 class="text-2xl text-deadpool-black">Plano X</h2>
                     </div>
                 </div>
                 <div class="m-2">

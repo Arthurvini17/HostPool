@@ -5,15 +5,15 @@
 
 @vite('resources/css/app.css')
 
-<div class="flex items-center justify-center min-h-screen mx-auto text-center font-pridi">
-    <div class="w-full p-4 md:w-1/2 lg:w-1/3">
+<div class="flex items-center justify-center min-h-screen text-center font-pridi">
+    <div class="w-1/3 p-4">
         <div class="mb-6">
-            <h1 class="text-2xl md:text-3xl lg:text-4xl">Faça seu login</h1>
-            <p class="text-md md:text-lg lg:text-xl">Para melhores promoções ative as notificações do email</p>
+            <h1 class="text-4xl ">Faça seu login</h1>
+            <p class="text-xl">Para melhores promoções ative as notificações do email</p>
         </div>
 
-        <div class="flex items-center justify-center">
-            <form action="" method="POST" class="flex flex-col w-full gap-4 p-4 rounded-md shadow-md">
+        <div class="flex items-center justify-center ">
+            <form action="" method="POST" class="flex flex-col w-full gap-4 p-4 rounded-md shadow-lg">
                 @csrf
                 <div class="text-start">
                     <label for="name">Seu nome</label>
@@ -30,13 +30,14 @@
                     <input class="w-full px-3 py-2 border rounded-md" type="password" name="password">
                 </div>
 
-                <div class="flex items-center text-start">
-                    <input class="mr-2" type="checkbox" name="remember">
+                <div class="flex items-center gap-2 text-start">
                     <label for="remember">Lembrar-me</label>
+                    <input type="checkbox" checked="checked" class="checkbox" />
+
                 </div>
 
                 <div>
-                    <button class="w-full px-4 py-2 text-white rounded-md bg-deadpool-red">Logar</button>
+                    <button class="w-full px-4 py-2 font-semibold text-white rounded-md bg-deadpool-red">Logar</button>
                 </div>
             </form>
         </div>

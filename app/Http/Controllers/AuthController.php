@@ -75,8 +75,9 @@ class AuthController extends Controller
             return view('welcome');
         } else {
             return back()->withErrors([
+                'password' => 'erro',
                 'email' => 'As credenciais fornecidas não correspondem aos nossos registros.',
-            ])->onlyInput('email');
+            ])->onlyInput('email', 'password');
         }
     }
 
