@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PlanController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//arrumar rotas do para controler welcome home index
 Route::get('/', [AuthController::class, 'home_index'])->name('home.index');
 
 Route::get('/register', [AuthController::class, 'register_index'])->name('register.index');
@@ -31,5 +33,6 @@ Route::get('/buyplan', [PlanController::class, 'buyPlanIndex'])->name('buy.plan.
 Route::post('/plans/buy/{plan}', [PlanController::class, 'buy'])->name('plan.buy');
 Route::delete('/plans/{plan}', [PlanController::class, 'delete'])->name('delete.plan');
 
+Route::get('/recursos', [HomeController::class, 'recursos_index'])->name('recursos.index');
 
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');

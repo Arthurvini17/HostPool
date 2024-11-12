@@ -7,7 +7,6 @@
 
     @vite('resources/css/app.css')
 
-
     <div class="flex flex-col items-center justify-center min-h-screen p-5 font-pridi sm:min-h-screen ">
 
         <div class="max-w-lg ">
@@ -66,6 +65,9 @@
         </div>
 
         
+
+
+        <button></button>
     </div>
     
 
