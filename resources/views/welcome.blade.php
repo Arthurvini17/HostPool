@@ -4,7 +4,7 @@
 
 @section('content')
 
-<body class="bg-slate-50 ">
+<body class=" bg-slate-50">
 
 
     <div class="flex items-center m-40 font-squada sm-min-h-screen ">
@@ -123,13 +123,14 @@
                 <img src="" alt="">
                 <div class="m-2">
                     <div class="flex">
-                    <img class="w-8" src="{{asset('images/icons8-carcajou-96.png')}}" alt="">
-                    <h2 class="text-2xl text-deadpool-black ">Plano W</h2>
-                </div>
+                        <img class="w-8" src="{{asset('images/icons8-carcajou-96.png')}}" alt="">
+                        <h2 class="text-2xl text-deadpool-black ">Plano W</h2>
+                    </div>
 
                 </div>
                 <div class="m-2">
-                    <p class="text-gray-500 ">Todos os recursos para facilitar a criação de uma loja virtual criativa</p>
+                    <p class="text-gray-500 ">Todos os recursos para facilitar a criação de uma loja virtual criativa
+                    </p>
                 </div>
                 <div class="m-2">
                     <p>Confira os valores <br> <span>Promocionais</span></p>
@@ -145,8 +146,8 @@
                 <img src="" alt="">
                 <div class="m-2">
                     <div class="flex">
-                    <img class="w-8" src="{{asset('images/icons8-x-men-50.png')}}" alt="">
-                    <h2 class="text-2xl text-deadpool-black">Plano X</h2>
+                        <img class="w-8" src="{{asset('images/icons8-x-men-50.png')}}" alt="">
+                        <h2 class="text-2xl text-deadpool-black">Plano X</h2>
                     </div>
                 </div>
                 <div class="m-2">
@@ -256,6 +257,27 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
+    <div class="flex items-center p-10 text-start bg-slate-900 justify-evenly">
+        <div class="text-start">
+            <h1 class="text-4xl font-bold text-white ">Hospedagem de <br> site com até 71% <br>OFF</h1>
+        </div>
+        <div class="">
+            <p class="text-xl font-semibold text-white">A partir de </p>
+            <p class="text-4xl font-bold text-blue-600">R$ 9,59/mês*</p>
+            <p class="text-2xl font-bold text-white">+ Dominio Grátis</p>
+        </div>
+
+        <button class="p-2 text-2xl font-bold rounded-sm bg-deadpool-yellow text-slate-800">Começar agora</button>
+    </div>
+
+
     <div class="w-full p-10 bg-white font-galano ">
         <div class="flex items-start justify-center gap-20">
             <div>
@@ -309,6 +331,63 @@
         </div>
     </div>
 
+
+    <div class="flex flex-col items-center mb-40 place-items-center">
+        <div class="flex items-center justify-center text-center">
+            <div>
+                <h1 class="text-3xl font-semibold text-deadpool-black">Junte-se à HostPool e aos 7 milhões de clientes de nosso grupo líder em tecnologia no mundo</h1>
+            </div>
+        </div>
+
+
+        <div x-data="{ open: false }">
+            <button @click="open = ! open" class="font-bold text-slate-950">É facil Hospedar sites na HostPool?</button>
+
+            <div x-show="open" x-transition>
+                <p class="text-black">Sim, as soluções de hospedagem de site da HostGator são intuitivas e fáceis de
+                    usar, mesmo para quem
+                    está
+                    começando agora na internet. Nosso propósito é oferecer a melhor experiência e ajudar nossos
+                    clientes a
+                    ter sucesso na internet.
+
+
+                    Para os momentos de dúvida você pode contar com o nosso suporte 24h via chat e e-mail. Você também
+                    conta
+                    com diversos outros canais de ajuda, como:
+
+
+                    Base de conhecimento completa, com tudo que você precisa saber sobre nossos produtos e serviços
+
+                    Blog da HostGator, com temas diversos sobre hospedagem, criação de sites e também sobre marketing
+                    digital</p>
+            </div>
+        </div>
+
+
+
+        <div x-data="{open : false}">
+            <button @click="open = ! open" class="font-bold text-slate-950">Por que eu preciso de uma hospedagem de
+                sites?</button>
+
+            <div x-show="open " x-transition>
+                <p class="text-black">A internet é o lugar em que a maioria das pessoas busca por produtos e serviços. E
+                    ter um site é a
+                    melhor forma de ser encontrado. Por isso, cada vez mais empresas de todos os tamanhos buscam por
+                    opções para criar e gerenciar seus sites.
+
+
+                    E como a hospedagem de sites entra nesta história? É simples: é a hospedagem que permite que os
+                    arquivos do seu site fiquem disponíveis na internet. Enquanto a hospedagem é responsável por
+                    armazenar os arquivos do seu site, o nome de domínio é o endereço que seus visitantes vão usar para
+                    chegar até você.
+
+
+                    Com os dois em dia seu site pode ser acessado de qualquer lugar, permitindo que você tenha uma
+                    vitrine online disponível 24h, promovendo e vendendo seus produtos e/ou serviços.</p>
+            </div>
+        </div>
+    </div>
 
 </body>
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" class="">
 
 <head>
     <meta charset="UTF-8">
@@ -7,12 +7,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&family=Squada+One&display=swap"
         rel="stylesheet">
-
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>@yield('title', 'HostPool')</title>
     @vite('resources/css/app.css')
 </head>
 
 <body>
+    
     <header class="p-4 text-white bg-deadpool-black font-pridi">
         <div class="flex gap-24">
             <div class="transition-opacity duration-500 opacity-0 animate-fade-in">
@@ -49,6 +50,8 @@
     <main class="">
         @yield('content')
     </main> 
+
+    
 </body>
 
 </html>
