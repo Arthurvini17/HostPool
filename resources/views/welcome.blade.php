@@ -207,13 +207,15 @@
     </div>
 
 
+
     <div class="flex flex-col items-center p-10 bg-slate-50">
         <div class="mb-4">
-            <h1 class="text-4xl ">Veja o que os clientes estão dizendo sobre nossos serviços de hospedagem</h1>
+            <h1 class="text-4xl font-medium">Veja o que os clientes estão dizendo sobre nossos serviços de hospedagem
+            </h1>
         </div>
         <div class="flex items-center justify-center p-2 ">
-            <div class="w-1/2 border carousel rounded-box">
-                <div class="flex flex-col flex-shrink-0 w-1/2 p-4 bg-white shadow-lg carousel-item">
+            <div class="w-1/2 gap-10 carousel rounded-box">
+                <div class="flex flex-col flex-shrink-0 w-1/2 p-4 bg-white border shadow-lg carousel-item">
                     <div>
                         <div class="mb-4">
                             <p>Mais completa e segura. É rápido, dinâmico e intuitivo. Recomendo pra quem precisa de um
@@ -229,7 +231,7 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col items-start flex-shrink-0 w-1/2 p-4 bg-white shadow-lg carousel-item">
+                <div class="flex flex-col items-start flex-shrink-0 w-1/2 p-4 bg-white border shadow-lg carousel-item">
                     <div class="mb-4">
                         <p>Mais completa e segura. É rápido, dinâmico e intuitivo. Recomendo pra quem precisa de um site
                             estável.</p>
@@ -242,7 +244,7 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col items-start flex-shrink-0 w-1/2 p-4 bg-white shadow-lg carousel-item">
+                <div class="flex flex-col items-start flex-shrink-0 w-1/2 p-4 bg-white border shadow-lg carousel-item">
                     <div class="mb-4">
                         <p>Mais completa e segura. É rápido, dinâmico e intuitivo. Recomendo pra quem precisa de um site
                             estável.</p>
@@ -263,131 +265,135 @@
 
 
 
-
-    <div class="flex items-center p-10 text-start bg-slate-900 justify-evenly">
-        <div class="text-start">
-            <h1 class="text-4xl font-bold text-white ">Hospedagem de <br> site com até 71% <br>OFF</h1>
+        <div class="flex flex-col items-center gap-4 mb-40 place-items-center">
+            <div class="flex items-center justify-center text-center">
+                <div class="mb-20">
+                    <h1 class="text-3xl font-semibold text-deadpool-black">
+                        Junte-se à HostPool e aos 7 milhões de clientes de nosso grupo líder em tecnologia no mundo
+                    </h1>
+                </div>
+            </div>
+        
+            <div x-data="{ open: false }"
+                 class="flex flex-col items-center justify-center w-1/2 p-5 rounded-md shadow cursor-pointer hover:bg-slate-100">
+                <button @click="open = !open" class="font-bold text-slate-950">
+                    É fácil hospedar sites na HostPool?
+                </button>
+        
+                <div x-show="open" x-transition class="text-left">
+                    <p class="font-medium text-black">
+                        Sim, as soluções de hospedagem de site da HostGator são intuitivas e fáceis de usar...
+                    </p>
+                </div>
+        
+                <div x-show="open" class="flex justify-center mt-2">
+                    <p>Colocar setinha aberto</p>
+                </div>
+        
+                <div x-show="!open" x-transition class="mt-2">
+                    <h1>Colocar setinha de fechado</h1>
+                </div>
+            </div>
+        
+            <div x-data="{ open: false }"
+                 class="flex flex-col items-center justify-center w-1/2 p-5 rounded-md shadow cursor-pointer hover:bg-slate-100">
+                <button @click="open = !open" class="font-bold text-slate-950">
+                    Por que eu preciso de uma hospedagem de sites?
+                </button>
+        
+                <div x-show="open" x-transition class="text-center">
+                    <p class="font-medium text-black">
+                        A internet é o lugar em que a maioria das pessoas busca por produtos e serviços...
+                    </p>
+                </div>
+            </div>
+        
+            <div x-data="{ open: false }"
+                 class="flex flex-col items-center justify-center w-1/2 p-5 rounded-md shadow cursor-pointer hover:bg-slate-100">
+                <button @click="open = !open" class="font-bold text-slate-950">
+                    Por que Comprar domínio com a HostPool?
+                </button>
+        
+                <div x-show="open" x-transition class="text-center">
+                    <p class="font-medium text-black">
+                        A HostPool atua como empresa autorizada pelas entidades de registro nacional...
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="">
-            <p class="text-xl font-semibold text-white">A partir de </p>
-            <p class="text-4xl font-bold text-blue-600">R$ 9,59/mês*</p>
-            <p class="text-2xl font-bold text-white">+ Dominio Grátis</p>
-        </div>
-
-        <button class="p-2 text-2xl font-bold rounded-sm bg-deadpool-yellow text-slate-800">Começar agora</button>
-    </div>
 
 
-    <div class="w-full p-10 bg-white font-galano ">
-        <div class="flex items-start justify-center gap-20">
-            <div>
-                <img src="{{asset('images/support-ra1000.png')}}" alt="">
+    <div>
+        <div class="flex items-center p-10 text-start bg-slate-900 justify-evenly">
+            <div class="text-start">
+                <h1 class="text-4xl font-bold text-white ">Hospedagem de <br> site com até 71% <br>OFF</h1>
+            </div>
+            <div class="">
+                <p class="text-xl font-semibold text-white">A partir de </p>
+                <p class="text-4xl font-bold text-blue-600">R$ 9,59/mês*</p>
+                <p class="text-2xl font-bold text-white">+ Dominio Grátis</p>
             </div>
 
-            <div class="flex flex-col ">
-                <div class="">
-                    <p class="text-2xl font-thin">24H POR DIA / 7 DIAS POR SEMANA</p>
-                </div>
+            <button class="p-2 text-2xl font-bold rounded-sm bg-deadpool-yellow text-slate-800">Começar agora</button>
+        </div>
 
+
+        <div class="w-full p-10 bg-white font-galano ">
+            <div class="flex items-start justify-center gap-20">
                 <div>
-                    <h1 class="mt-4 text-4xl font-bold text-deadpool-black ">Suporte humanizado <br>e sempre
-                        presente</h1>
+                    <img src="{{asset('images/support-ra1000.png')}}" alt="">
                 </div>
 
-                <div class="w-30">
-                    <p class="mt-4 text-deadpool-black">Você sabia que mais de 2,5 mil sites são criados todos os
-                        dias? <br> Conte com a HostPool para se
-                        destacar no meio de tudo isso. <br> Junte-se a milhares de clientes e tenha uma experiência
-                        completa
-                        e apoio no que você precisar.</p>
-                </div>
-
-                <div class="mt-2 font-galano text-slate-900">
-                    <div class="flex items-start gap-2 py-2">
-                        <img class="w-5" src="{{asset('images/correto.png')}}" alt="">
-                        <p>Infraestrutura, serviços e muita informação</p>
+                <div class="flex flex-col ">
+                    <div class="">
+                        <p class="text-2xl font-thin">24H POR DIA / 7 DIAS POR SEMANA</p>
                     </div>
 
-                    <div class="flex items-start gap-2 py-2 ">
-                        <img class="w-5" src="{{asset('images/correto.png')}}" alt="">
-
-                        <p>Seu site preparado para crescer, engajar e converter mais clientes</p>
+                    <div>
+                        <h1 class="mt-4 text-4xl font-bold text-deadpool-black ">Suporte humanizado <br>e sempre
+                            presente</h1>
                     </div>
 
-                    <div class="flex items-start gap-2 py-2 ">
-                        <img class="w-5" src="{{asset('images/correto.png')}}" alt="">
-
-                        <p>Aquele suporte humanizado e sempre presente</p>
+                    <div class="w-30">
+                        <p class="mt-4 text-deadpool-black">Você sabia que mais de 2,5 mil sites são criados todos os
+                            dias? <br> Conte com a HostPool para se
+                            destacar no meio de tudo isso. <br> Junte-se a milhares de clientes e tenha uma experiência
+                            completa
+                            e apoio no que você precisar.</p>
                     </div>
 
+                    <div class="mt-2 font-galano text-slate-900">
+                        <div class="flex items-start gap-2 py-2">
+                            <img class="w-5" src="{{asset('images/correto.png')}}" alt="">
+                            <p>Infraestrutura, serviços e muita informação</p>
+                        </div>
 
-                    <div class="flex items-start gap-2 py-2">
-                        <img class="w-5" src="{{asset('images/correto.png')}}" alt="">
+                        <div class="flex items-start gap-2 py-2 ">
+                            <img class="w-5" src="{{asset('images/correto.png')}}" alt="">
 
-                        <p>E muito mais...</p>
+                            <p>Seu site preparado para crescer, engajar e converter mais clientes</p>
+                        </div>
+
+                        <div class="flex items-start gap-2 py-2 ">
+                            <img class="w-5" src="{{asset('images/correto.png')}}" alt="">
+
+                            <p>Aquele suporte humanizado e sempre presente</p>
+                        </div>
+
+
+                        <div class="flex items-start gap-2 py-2">
+                            <img class="w-5" src="{{asset('images/correto.png')}}" alt="">
+
+                            <p>E muito mais...</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <input type="checkbox" class="toggle" />
     </div>
 
 
-    <div class="flex flex-col items-center mb-40 place-items-center">
-        <div class="flex items-center justify-center text-center">
-            <div>
-                <h1 class="text-3xl font-semibold text-deadpool-black">Junte-se à HostPool e aos 7 milhões de clientes de nosso grupo líder em tecnologia no mundo</h1>
-            </div>
-        </div>
-
-
-        <div x-data="{ open: false }">
-            <button @click="open = ! open" class="font-bold text-slate-950">É facil Hospedar sites na HostPool?</button>
-
-            <div x-show="open" x-transition>
-                <p class="text-black">Sim, as soluções de hospedagem de site da HostGator são intuitivas e fáceis de
-                    usar, mesmo para quem
-                    está
-                    começando agora na internet. Nosso propósito é oferecer a melhor experiência e ajudar nossos
-                    clientes a
-                    ter sucesso na internet.
-
-
-                    Para os momentos de dúvida você pode contar com o nosso suporte 24h via chat e e-mail. Você também
-                    conta
-                    com diversos outros canais de ajuda, como:
-
-
-                    Base de conhecimento completa, com tudo que você precisa saber sobre nossos produtos e serviços
-
-                    Blog da HostGator, com temas diversos sobre hospedagem, criação de sites e também sobre marketing
-                    digital</p>
-            </div>
-        </div>
-
-
-
-        <div x-data="{open : false}">
-            <button @click="open = ! open" class="font-bold text-slate-950">Por que eu preciso de uma hospedagem de
-                sites?</button>
-
-            <div x-show="open " x-transition>
-                <p class="text-black">A internet é o lugar em que a maioria das pessoas busca por produtos e serviços. E
-                    ter um site é a
-                    melhor forma de ser encontrado. Por isso, cada vez mais empresas de todos os tamanhos buscam por
-                    opções para criar e gerenciar seus sites.
-
-
-                    E como a hospedagem de sites entra nesta história? É simples: é a hospedagem que permite que os
-                    arquivos do seu site fiquem disponíveis na internet. Enquanto a hospedagem é responsável por
-                    armazenar os arquivos do seu site, o nome de domínio é o endereço que seus visitantes vão usar para
-                    chegar até você.
-
-
-                    Com os dois em dia seu site pode ser acessado de qualquer lugar, permitindo que você tenha uma
-                    vitrine online disponível 24h, promovendo e vendendo seus produtos e/ou serviços.</p>
-            </div>
-        </div>
-    </div>
 
 </body>
 
