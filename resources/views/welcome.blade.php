@@ -265,62 +265,96 @@
 
 
 
-        <div class="flex flex-col items-center gap-4 mb-40 place-items-center">
-            <div class="flex items-center justify-center text-center">
-                <div class="mb-20">
-                    <h1 class="text-3xl font-semibold text-deadpool-black">
-                        Junte-se à HostPool e aos 7 milhões de clientes de nosso grupo líder em tecnologia no mundo
-                    </h1>
-                </div>
-            </div>
-        
-            <div x-data="{ open: false }"
-                 class="flex flex-col items-center justify-center w-1/2 p-5 rounded-md shadow cursor-pointer hover:bg-slate-100">
-                <button @click="open = !open" class="font-bold text-slate-950">
-                    É fácil hospedar sites na HostPool?
-                </button>
-        
-                <div x-show="open" x-transition class="text-left">
-                    <p class="font-medium text-black">
-                        Sim, as soluções de hospedagem de site da HostGator são intuitivas e fáceis de usar...
-                    </p>
-                </div>
-        
-                <div x-show="open" class="flex justify-center mt-2">
-                    <p>Colocar setinha aberto</p>
-                </div>
-        
-                <div x-show="!open" x-transition class="mt-2">
-                    <h1>Colocar setinha de fechado</h1>
-                </div>
-            </div>
-        
-            <div x-data="{ open: false }"
-                 class="flex flex-col items-center justify-center w-1/2 p-5 rounded-md shadow cursor-pointer hover:bg-slate-100">
-                <button @click="open = !open" class="font-bold text-slate-950">
-                    Por que eu preciso de uma hospedagem de sites?
-                </button>
-        
-                <div x-show="open" x-transition class="text-center">
-                    <p class="font-medium text-black">
-                        A internet é o lugar em que a maioria das pessoas busca por produtos e serviços...
-                    </p>
-                </div>
-            </div>
-        
-            <div x-data="{ open: false }"
-                 class="flex flex-col items-center justify-center w-1/2 p-5 rounded-md shadow cursor-pointer hover:bg-slate-100">
-                <button @click="open = !open" class="font-bold text-slate-950">
-                    Por que Comprar domínio com a HostPool?
-                </button>
-        
-                <div x-show="open" x-transition class="text-center">
-                    <p class="font-medium text-black">
-                        A HostPool atua como empresa autorizada pelas entidades de registro nacional...
-                    </p>
-                </div>
+    <div class="flex flex-col items-center gap-4 mb-40 place-items-center">
+        <div class="flex items-center justify-center text-center">
+            <div class="mb-20">
+                <h1 class="text-3xl font-semibold text-deadpool-black">
+                    Junte-se à HostPool e aos 7 milhões de clientes de nosso grupo líder em tecnologia no mundo
+                </h1>
             </div>
         </div>
+
+        <div x-data="{ open: false }"
+            class="flex flex-col items-center justify-center w-1/2 p-5 rounded-md shadow cursor-pointer hover:bg-slate-100">
+            <div class="flex flex-col items-start w-full">
+                <div class="flex justify-between w-full">
+                    <button @click="open = !open"
+                        class="items-end font-bold text-slate-950 place-items-end place-self-end">
+                        É fácil hospedar sites na HostPool?
+                    </button>
+                    <div x-show="!open" x-transition class="items-end ">
+                        <img src="{{asset('images/icons8-flecha-50.png')}}" class="w-5 rotate-90 " alt="">
+                    </div>
+
+                    <div x-show="open">
+                        <img src="{{asset('images/icons8-seta-longa-acima-50.png')}}" class="w-5 font-bold" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div x-show="open" x-transition class="text-left">
+                <p class="font-medium text-black">
+                    Sim, as soluções de hospedagem de site da HostGator são intuitivas e fáceis de usar...
+                </p>
+            </div>
+        </div>
+
+        <div x-data="{ open: false }"
+            class="flex flex-col items-center justify-center w-1/2 p-5 rounded-md shadow cursor-pointer hover:bg-slate-100">
+            <div class="flex flex-col items-start w-full">
+                <div class="flex justify-between w-full">
+                    <button @click="open = !open" class="font-bold text-left text-slate-950">
+                        Por que eu preciso de uma hospedagem de sites?
+                    </button>
+                    <div class="">
+                        <div x-show="!open" x-transition class="items-end ">
+                            <img src="{{asset('images/icons8-flecha-50.png')}}" class="w-5 rotate-90 " alt="">
+                        </div>
+                    </div>
+
+                    <div x-show="open">
+                        <img src="{{asset('images/icons8-seta-longa-acima-50.png')}}" class="w-5" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+            <div x-show="open" x-transition class="text-center">
+                <p class="font-medium text-black">
+                    A internet é o lugar em que a maioria das pessoas busca por produtos e serviços...
+                </p>
+            </div>
+        </div>
+
+        <div x-data="{ open: false }"
+            class="flex flex-col items-center justify-center w-1/2 p-5 rounded-md shadow cursor-pointer hover:bg-slate-100">
+            <div class="flex flex-col items-start w-full">
+                <div class="flex justify-between w-full">
+                    <button @click="open = !open" class="font-bold text-slate-950">
+                        Por que Comprar domínio com a HostPool?
+                    </button>
+
+                    <div>
+                        <div x-show="!open" x-transition class="items-end ">
+                            <img src="{{asset('images/icons8-flecha-50.png')}}" class="w-5 rotate-90 " alt="">
+                        </div>
+                    </div>
+
+                    <div x-show="open">
+                        <img src="{{asset('images/icons8-seta-longa-acima-50.png')}}" class="w-5 font-bold" alt="">
+                    </div>
+                </div>
+
+              
+            </div>
+
+            <div x-show="open" x-transition class="text-center">
+                <p class="font-medium text-black">
+                    A HostPool atua como empresa autorizada pelas entidades de registro nacional...
+                </p>
+            </div>
+        </div>
+    </div>
 
 
     <div>
